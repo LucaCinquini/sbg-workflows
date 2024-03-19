@@ -12,6 +12,9 @@ requirements:
   InlineJavascriptRequirement: {}
   StepInputExpressionRequirement: {}
   MultipleInputFeatureRequirement: {}
+  InitialWorkDirRequirement:
+    listing:
+      - $(inputs.input_cmr_stac)
 
 
 ## Inputs to the e2e rebinning, not to each applicaiton within the workflow
@@ -20,7 +23,7 @@ inputs:
   # Generic inputs
   input_processing_labels: string[]
 
-  input_cmr_stac: string
+  input_cmr_stac: File
 
   # catalog inputs
   input_unity_dapa_api: string
