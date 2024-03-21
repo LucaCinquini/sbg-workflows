@@ -12,6 +12,10 @@ requirements:
   InlineJavascriptRequirement: {}
   StepInputExpressionRequirement: {}
   MultipleInputFeatureRequirement: {}
+  InitialWorkDirRequirement:
+    listing:
+      - $(inputs.input_stac)
+
 
 
 ## Inputs to the e2e rebinning, not to each applicaiton within the workflow
@@ -29,7 +33,6 @@ inputs:
   #for preprocess  step
   input_crid: string
   input_stac: 
-    - string
     - File 
   input_aux_stac: 
     - string
